@@ -600,16 +600,16 @@ int Session::end()
 		DEBUG("%s: timed out waiting for completion\n", __func__);
 	}
 
-	for (Device* dev: m_devices) {
-		ret = dev->off();
-		if (ret == -ENODEV) {
+	//for (Device* dev: m_devices) {
+	//	ret = dev->off();
+	//	if (ret == -ENODEV) {
 			// the device has already been detached
-			ret = 0;
-			continue;
-		} else if (ret) {
-			break;
-		}
-	}
+	//		ret = 0;
+	//		continue;
+	//	} else if (ret) {
+	//		break;
+	//	}
+	//}
 	return ret;
 }
 
